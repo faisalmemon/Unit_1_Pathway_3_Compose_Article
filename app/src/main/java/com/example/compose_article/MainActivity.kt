@@ -35,7 +35,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             Compose_ArticleTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ComposeArticle(title = stringResource(R.string.title),
+                    ComposeArticle(
+                        modifier = Modifier.padding(innerPadding),
+                        title = stringResource(R.string.title),
                         shortDescription = stringResource(R.string.explanation_high_level),
                         longDescription = stringResource(R.string.explanation_low_level)
                     )
